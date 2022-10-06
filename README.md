@@ -3,7 +3,7 @@
 ## Introduction
 
 This small project was motivated by my all frustrations with the webapp supplied by Gavazzi SmartHouse automation.
-I choose to switch to Home Assistant, and have never looked back, it plays very well with the SmartHouse modbus, and gives very good performance, easy login, better UI, a lot of community support and modules. Best of all, you can still utilize all the SmartHouse automation.
+I choose to switch to Home Assistant, and have never looked back. It plays very well with the SmartHouse modbus, and gives very good performance, easy login, much faster and better app, a lot of community support and modules. Best of all, you can still utilize all the SmartHouse automation.
 
 ![Home Assistant with Mushroom cards](example/mushroom.jpg)
 
@@ -21,4 +21,4 @@ I choose to switch to Home Assistant, and have never looked back, it plays very 
 ## Need help?
 
 I am in a lack of time, so this is not a thorough guide. Please let me know if people are interested in a more detailed guide. 
-I will try to expand it if you tell me what problems you encounter. I do not want to spend time building it, if no one are going to use it.  
+I will try to expand it if you tell me what problems you encounter. I do not want to spend time building it, if no one are going to use it, so reach out.
