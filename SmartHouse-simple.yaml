@@ -1,0 +1,120 @@
+      - name: "(Fx) Lys enhætte"
+        address: 4434
+        slave: 1
+        write_type: holding
+        scan_interval: 1
+        verify:
+          input_type: holding
+          address: 4434
+          state_on: 1
+          state_off: 0
+      - name: "(Fx) Spisestue - Dimmable light"
+        address: 4588
+        slave: 1
+        write_type: holding
+        scan_interval: 1
+        verify:
+          input_type: holding
+          address: 4588
+          state_on: 1
+          state_off: 0
+      - name: "(Fx) Dørlås"
+        address: 4648
+        slave: 1
+        write_type: holding
+        scan_interval: 1
+        verify:
+          input_type: holding
+          address: 4648
+          state_on: 1
+          state_off: 0
+      - name: "(Fx) Loftlampe"
+        address: 4720
+        slave: 1
+        write_type: holding
+        scan_interval: 1
+        verify:
+          input_type: holding
+          address: 4720
+          state_on: 1
+          state_off: 0
+      - name: "(Fx) Trappen - Light function"
+        address: 4540
+        slave: 1
+        write_type: holding
+        scan_interval: 1
+        verify:
+          input_type: holding
+          address: 4540
+          state_on: 1
+          state_off: 0
+      - name: "(Fx) Multi (1_sal) - Light function"
+        address: 4842
+        slave: 1
+        write_type: holding
+        scan_interval: 1
+        verify:
+          input_type: holding
+          address: 4842
+          state_on: 1
+          state_off: 0
+      - name: "(Fx) Stuen - Light function Turn all off"
+        address: 8150
+        slave: 1
+        write_type: holding
+        scan_interval: 1
+        verify:
+          input_type: holding
+          address: 8150
+          state_on: 1
+          state_off: 0
+      - name: "(Fx) 1_ Sal - Light function Turn all off"
+        address: 12840
+        slave: 1
+        write_type: holding
+        scan_interval: 1
+        verify:
+          input_type: holding
+          address: 12840
+          state_on: 1
+          state_off: 0
+      - name: "(Fx) Root - Light function Turn all off (delay)"
+        address: 12866
+        slave: 1
+        write_type: holding
+        scan_interval: 1
+        verify:
+          input_type: holding
+          address: 12866
+          state_on: 1
+          state_off: 0
+      - name: "(Fx) Garage - Port åbne/lukke"
+        address: 12892
+        slave: 1
+        write_type: holding
+        scan_interval: 1
+        verify:
+          input_type: holding
+          address: 12892
+          state_on: 1
+          state_off: 0
+      - name: "(Fx) Hall - Light function"
+        address: 12970
+        slave: 1
+        write_type: holding
+        scan_interval: 1
+        verify:
+          input_type: holding
+          address: 12970
+          state_on: 1
+          state_off: 0
+      - name: "(Fx) Garage - Port status"
+        address: 4350
+        slave: 1
+        write_type: holding
+        scan_interval: 1
+        verify:
+          input_type: holding
+          address: 4350
+          state_on: 1
+          state_off: 0

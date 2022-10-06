@@ -1,0 +1,552 @@
+- platform: template
+  lights:
+    fxkokken_smartlight:
+      friendly_name: "(Fx) Køkken - Smart light "
+      level_template: "{{ (((states('sensor.sensor_fxkokken_smartlight')|int)*17)/6)-(85/3)  }}"
+      value_template: "{{ states('sensor.sensor_fxkokken_smartlight')|int > 0 }}"
+      turn_off:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 356
+          value: 0
+      turn_on:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 356
+          value: 1
+      set_level:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 356
+          value: "{{ (brightness/255)*90+10 }}"
+    fxbadevarelse_smartlight:
+      friendly_name: "(Fx) Badeværelse - Smart light "
+      level_template: "{{ (((states('sensor.sensor_fxbadevarelse_smartlight')|int)*17)/6)-(85/3)  }}"
+      value_template: "{{ states('sensor.sensor_fxbadevarelse_smartlight')|int > 0 }}"
+      turn_off:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 856
+          value: 0
+      turn_on:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 856
+          value: 1
+      set_level:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 856
+          value: "{{ (brightness/255)*90+10 }}"
+    fxmellemgang_smartlight:
+      friendly_name: "(Fx) Mellemgang - Smart light "
+      level_template: "{{ (((states('sensor.sensor_fxmellemgang_smartlight')|int)*17)/6)-(85/3)  }}"
+      value_template: "{{ states('sensor.sensor_fxmellemgang_smartlight')|int > 0 }}"
+      turn_off:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 1356
+          value: 0
+      turn_on:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 1356
+          value: 1
+      set_level:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 1356
+          value: "{{ (brightness/255)*90+10 }}"
+    fxhall_smartlight:
+      friendly_name: "(Fx) Hall - Smart light "
+      level_template: "{{ (((states('sensor.sensor_fxhall_smartlight')|int)*17)/6)-(85/3)  }}"
+      value_template: "{{ states('sensor.sensor_fxhall_smartlight')|int > 0 }}"
+      turn_off:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 1856
+          value: 0
+      turn_on:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 1856
+          value: 1
+      set_level:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 1856
+          value: "{{ (brightness/255)*90+10 }}"
+    fxvarelse_smartlight:
+      friendly_name: "(Fx) Værelse - Smart light "
+      level_template: "{{ (((states('sensor.sensor_fxvarelse_smartlight')|int)*17)/6)-(85/3)  }}"
+      value_template: "{{ states('sensor.sensor_fxvarelse_smartlight')|int > 0 }}"
+      turn_off:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 2356
+          value: 0
+      turn_on:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 2356
+          value: 1
+      set_level:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 2356
+          value: "{{ (brightness/255)*90+10 }}"
+    fxviktualierum_smartlight:
+      friendly_name: "(Fx) Viktualierum - Smart light "
+      level_template: "{{ (((states('sensor.sensor_fxviktualierum_smartlight')|int)*17)/6)-(85/3)  }}"
+      value_template: "{{ states('sensor.sensor_fxviktualierum_smartlight')|int > 0 }}"
+      turn_off:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 2856
+          value: 0
+      turn_on:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 2856
+          value: 1
+      set_level:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 2856
+          value: "{{ (brightness/255)*90+10 }}"
+    fxspisestue_smartlight:
+      friendly_name: "(Fx) Spisestue - Smart light "
+      level_template: "{{ (((states('sensor.sensor_fxspisestue_smartlight')|int)*17)/6)-(85/3)  }}"
+      value_template: "{{ states('sensor.sensor_fxspisestue_smartlight')|int > 0 }}"
+      turn_off:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 3356
+          value: 0
+      turn_on:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 3356
+          value: 1
+      set_level:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 3356
+          value: "{{ (brightness/255)*90+10 }}"
+    fxsovevarelse_smartlight:
+      friendly_name: "(Fx) Soveværelse - Smart light "
+      level_template: "{{ (((states('sensor.sensor_fxsovevarelse_smartlight')|int)*17)/6)-(85/3)  }}"
+      value_template: "{{ states('sensor.sensor_fxsovevarelse_smartlight')|int > 0 }}"
+      turn_off:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 4766
+          value: 0
+      turn_on:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 4766
+          value: 1
+      set_level:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 4766
+          value: "{{ (brightness/255)*90+10 }}"
+    fxbryggers_smartlight:
+      friendly_name: "(Fx) Bryggers - Smart light "
+      level_template: "{{ (((states('sensor.sensor_fxbryggers_smartlight')|int)*17)/6)-(85/3)  }}"
+      value_template: "{{ states('sensor.sensor_fxbryggers_smartlight')|int > 0 }}"
+      turn_off:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 5586
+          value: 0
+      turn_on:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 5586
+          value: 1
+      set_level:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 5586
+          value: "{{ (brightness/255)*90+10 }}"
+    fxforan_smartlight:
+      friendly_name: "(Fx) Foran - Smart light "
+      level_template: "{{ (((states('sensor.sensor_fxforan_smartlight')|int)*17)/6)-(85/3)  }}"
+      value_template: "{{ states('sensor.sensor_fxforan_smartlight')|int > 0 }}"
+      turn_off:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 6086
+          value: 0
+      turn_on:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 6086
+          value: 1
+      set_level:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 6086
+          value: "{{ (brightness/255)*90+10 }}"
+    fxmulti1_sal_smartlight:
+      friendly_name: "(Fx) Multi (1_sal) - Smart light "
+      level_template: "{{ (((states('sensor.sensor_fxmulti1_sal_smartlight')|int)*17)/6)-(85/3)  }}"
+      value_template: "{{ states('sensor.sensor_fxmulti1_sal_smartlight')|int > 0 }}"
+      turn_off:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 6586
+          value: 0
+      turn_on:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 6586
+          value: 1
+      set_level:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 6586
+          value: "{{ (brightness/255)*90+10 }}"
+    fxprojektor_smartlightbagved1_sal:
+      friendly_name: "(Fx) Projektor - Smart light Bagved (1_sal) "
+      level_template: "{{ (((states('sensor.sensor_fxprojektor_smartlightbagved1_sal')|int)*17)/6)-(85/3)  }}"
+      value_template: "{{ states('sensor.sensor_fxprojektor_smartlightbagved1_sal')|int > 0 }}"
+      turn_off:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 7086
+          value: 0
+      turn_on:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 7086
+          value: 1
+      set_level:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 7086
+          value: "{{ (brightness/255)*90+10 }}"
+    fxudestue1_sal_smartlight:
+      friendly_name: "(Fx) Udestue (1_sal) - Smart light "
+      level_template: "{{ (((states('sensor.sensor_fxudestue1_sal_smartlight')|int)*17)/6)-(85/3)  }}"
+      value_template: "{{ states('sensor.sensor_fxudestue1_sal_smartlight')|int > 0 }}"
+      turn_off:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 7586
+          value: 0
+      turn_on:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 7586
+          value: 1
+      set_level:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 7586
+          value: "{{ (brightness/255)*90+10 }}"
+    fxvarelsenord1_sal_smartlight:
+      friendly_name: "(Fx) Værelse (Nord) (1_sal) - Smart light "
+      level_template: "{{ (((states('sensor.sensor_fxvarelsenord1_sal_smartlight')|int)*17)/6)-(85/3)  }}"
+      value_template: "{{ states('sensor.sensor_fxvarelsenord1_sal_smartlight')|int > 0 }}"
+      turn_off:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 8212
+          value: 0
+      turn_on:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 8212
+          value: 1
+      set_level:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 8212
+          value: "{{ (brightness/255)*90+10 }}"
+    fxvarelseost1_sal_smartlight:
+      friendly_name: "(Fx) Værelse (Øst) (1_sal) - Smart light "
+      level_template: "{{ (((states('sensor.sensor_fxvarelseost1_sal_smartlight')|int)*17)/6)-(85/3)  }}"
+      value_template: "{{ states('sensor.sensor_fxvarelseost1_sal_smartlight')|int > 0 }}"
+      turn_off:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 8712
+          value: 0
+      turn_on:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 8712
+          value: 1
+      set_level:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 8712
+          value: "{{ (brightness/255)*90+10 }}"
+    fxgarage_smartlight:
+      friendly_name: "(Fx) Garage - Smart light "
+      level_template: "{{ (((states('sensor.sensor_fxgarage_smartlight')|int)*17)/6)-(85/3)  }}"
+      value_template: "{{ states('sensor.sensor_fxgarage_smartlight')|int > 0 }}"
+      turn_off:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 9212
+          value: 0
+      turn_on:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 9212
+          value: 1
+      set_level:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 9212
+          value: "{{ (brightness/255)*90+10 }}"
+    fxbagved_smartlight:
+      friendly_name: "(Fx) Bagved - Smart light "
+      level_template: "{{ (((states('sensor.sensor_fxbagved_smartlight')|int)*17)/6)-(85/3)  }}"
+      value_template: "{{ states('sensor.sensor_fxbagved_smartlight')|int > 0 }}"
+      turn_off:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 9712
+          value: 0
+      turn_on:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 9712
+          value: 1
+      set_level:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 9712
+          value: "{{ (brightness/255)*90+10 }}"
+    fxskur_smartlight:
+      friendly_name: "(Fx) Skur - Smart light "
+      level_template: "{{ (((states('sensor.sensor_fxskur_smartlight')|int)*17)/6)-(85/3)  }}"
+      value_template: "{{ states('sensor.sensor_fxskur_smartlight')|int > 0 }}"
+      turn_off:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 10212
+          value: 0
+      turn_on:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 10212
+          value: 1
+      set_level:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 10212
+          value: "{{ (brightness/255)*90+10 }}"
+    fxprojektor_smartlightforan:
+      friendly_name: "(Fx) Projektor - Smart light Foran "
+      level_template: "{{ (((states('sensor.sensor_fxprojektor_smartlightforan')|int)*17)/6)-(85/3)  }}"
+      value_template: "{{ states('sensor.sensor_fxprojektor_smartlightforan')|int > 0 }}"
+      turn_off:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 10776
+          value: 0
+      turn_on:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 10776
+          value: 1
+      set_level:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 10776
+          value: "{{ (brightness/255)*90+10 }}"
+    fxbadevarelse1_sal_smartlight:
+      friendly_name: "(Fx) Badeværelse (1_sal) - Smart light "
+      level_template: "{{ (((states('sensor.sensor_fxbadevarelse1_sal_smartlight')|int)*17)/6)-(85/3)  }}"
+      value_template: "{{ states('sensor.sensor_fxbadevarelse1_sal_smartlight')|int > 0 }}"
+      turn_off:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 11276
+          value: 0
+      turn_on:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 11276
+          value: 1
+      set_level:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 11276
+          value: "{{ (brightness/255)*90+10 }}"
+    fxterassestuen_smartlight:
+      friendly_name: "(Fx) Terasse Stuen - Smart light "
+      level_template: "{{ (((states('sensor.sensor_fxterassestuen_smartlight')|int)*17)/6)-(85/3)  }}"
+      value_template: "{{ states('sensor.sensor_fxterassestuen_smartlight')|int > 0 }}"
+      turn_off:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 11840
+          value: 0
+      turn_on:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 11840
+          value: 1
+      set_level:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 11840
+          value: "{{ (brightness/255)*90+10 }}"
+    fxterasse1_sal_smartlight:
+      friendly_name: "(Fx) Terasse (1_sal) - Smart light "
+      level_template: "{{ (((states('sensor.sensor_fxterasse1_sal_smartlight')|int)*17)/6)-(85/3)  }}"
+      value_template: "{{ states('sensor.sensor_fxterasse1_sal_smartlight')|int > 0 }}"
+      turn_off:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 12340
+          value: 0
+      turn_on:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 12340
+          value: 1
+      set_level:
+        service: modbus.write_register
+        data_template:
+          hub: SmartHouse
+          unit: 1
+          address: 12340
+          value: "{{ (brightness/255)*90+10 }}"

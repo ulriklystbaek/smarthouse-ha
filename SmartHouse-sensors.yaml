@@ -1,0 +1,132 @@
+      - name: "sensor_fxkokken_smartlight"
+        address: 359
+        slave: 1
+        data_type: uint16
+        input_type: input
+        scan_interval: 1
+      - name: "sensor_fxbadevarelse_smartlight"
+        address: 928
+        slave: 1
+        data_type: uint16
+        input_type: input
+        scan_interval: 1
+      - name: "sensor_fxmellemgang_smartlight"
+        address: 1428
+        slave: 1
+        data_type: uint16
+        input_type: input
+        scan_interval: 1
+      - name: "sensor_fxhall_smartlight"
+        address: 1928
+        slave: 1
+        data_type: uint16
+        input_type: input
+        scan_interval: 1
+      - name: "sensor_fxvarelse_smartlight"
+        address: 2428
+        slave: 1
+        data_type: uint16
+        input_type: input
+        scan_interval: 1
+      - name: "sensor_fxviktualierum_smartlight"
+        address: 2928
+        slave: 1
+        data_type: uint16
+        input_type: input
+        scan_interval: 1
+      - name: "sensor_fxspisestue_smartlight"
+        address: 3428
+        slave: 1
+        data_type: uint16
+        input_type: input
+        scan_interval: 1
+      - name: "sensor_fxsovevarelse_smartlight"
+        address: 4838
+        slave: 1
+        data_type: uint16
+        input_type: input
+        scan_interval: 1
+      - name: "sensor_fxbryggers_smartlight"
+        address: 5658
+        slave: 1
+        data_type: uint16
+        input_type: input
+        scan_interval: 1
+      - name: "sensor_fxforan_smartlight"
+        address: 6158
+        slave: 1
+        data_type: uint16
+        input_type: input
+        scan_interval: 1
+      - name: "sensor_fxmulti1_sal_smartlight"
+        address: 6658
+        slave: 1
+        data_type: uint16
+        input_type: input
+        scan_interval: 1
+      - name: "sensor_fxprojektor_smartlightbagved1_sal"
+        address: 7158
+        slave: 1
+        data_type: uint16
+        input_type: input
+        scan_interval: 1
+      - name: "sensor_fxudestue1_sal_smartlight"
+        address: 7658
+        slave: 1
+        data_type: uint16
+        input_type: input
+        scan_interval: 1
+      - name: "sensor_fxvarelsenord1_sal_smartlight"
+        address: 8215
+        slave: 1
+        data_type: uint16
+        input_type: input
+        scan_interval: 1
+      - name: "sensor_fxvarelseost1_sal_smartlight"
+        address: 8715
+        slave: 1
+        data_type: uint16
+        input_type: input
+        scan_interval: 1
+      - name: "sensor_fxgarage_smartlight"
+        address: 9215
+        slave: 1
+        data_type: uint16
+        input_type: input
+        scan_interval: 1
+      - name: "sensor_fxbagved_smartlight"
+        address: 9715
+        slave: 1
+        data_type: uint16
+        input_type: input
+        scan_interval: 1
+      - name: "sensor_fxskur_smartlight"
+        address: 10215
+        slave: 1
+        data_type: uint16
+        input_type: input
+        scan_interval: 1
+      - name: "sensor_fxprojektor_smartlightforan"
+        address: 10895
+        slave: 1
+        data_type: uint16
+        input_type: input
+        scan_interval: 1
+      - name: "sensor_fxbadevarelse1_sal_smartlight"
+        address: 11447
+        slave: 1
+        data_type: uint16
+        input_type: input
+        scan_interval: 1
+      - name: "sensor_fxterassestuen_smartlight"
+        address: 12011
+        slave: 1
+        data_type: uint16
+        input_type: input
+        scan_interval: 1
+      - name: "sensor_fxterasse1_sal_smartlight"
+        address: 12511
+        slave: 1
+        data_type: uint16
+        input_type: input
+        scan_interval: 1
