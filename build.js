@@ -13,12 +13,6 @@ fs.readFile('input.csv', 'utf8' , (err, data) => {
         const name = data.substr(nIndex + 1, pos - nIndex - 1);
         const register = parseInt(data.substr(pos + 14, 5));
 
-        const sanitized = name.toLowerCase().replace(/-/g, '_')
-            .replace(/ø/g, 'o')
-            .replace(/æ/g, 'a')
-            .replace(/å/g, 'a')
-            .replace(/[ ()]/g, '');
-
         simple.push(`      - name: "${name}"
         address: ${register}
         slave: 1
@@ -30,8 +24,6 @@ fs.readFile('input.csv', 'utf8' , (err, data) => {
           state_on: 1
           state_off: 0`)
     }
-
-console.log(simple);
 
 
     while((pos = data.indexOf('Master level status,IREG,', pos + 1)) > -1) {
